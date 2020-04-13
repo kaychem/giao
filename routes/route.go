@@ -7,4 +7,5 @@ import (
 
 func init()  {
 	vendors.App.Route("GET","/", &controller.IndexController{}, "Index")
+	vendors.App.Route("GET","hello", &controller.IndexController{}, "Hello")
 }

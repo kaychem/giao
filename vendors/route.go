@@ -1,11 +1,12 @@
 package vendors
 
 func (app *app) Route(method string, relativePath string, controller2 ControllerInterface, action string)  {
-	info := &RouteInfo{}
-	info.Controller = controller2
-	info.Path = relativePath
-	info.Method = method
-	info.Action = action
+	info := &RouteInfo{
+		Controller: controller2,
+		Path: relativePath,
+		Method: method,
+		Action :action,
+	}
 	app.Routes = append(app.Routes, info)
 }
 

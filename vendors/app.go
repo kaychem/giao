@@ -40,7 +40,7 @@ func (app *app) handleRoute()  {
 		in := make([]reflect.Value, 0)
 
 		App.Engine.Handle(method, route.Path, func(context *gin.Context) {
-			//vc.FieldByName("Context") =  context
+			route.Controller.SetContext(context)
 			route.Controller.Init()
 			route.Controller.Before()
 			vc.MethodByName(action).Call(in)

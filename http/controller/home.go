@@ -8,15 +8,13 @@ import (
 type IndexController struct {
 	vendors.Controller
 }
-func (controller IndexController) Init()  {
-	//controller.Context.JSON(200, gin.H{
-	//	"message": "消息",
-	//})
-	fmt.Print("首页")
-}
 func (controller IndexController) Index()  {
+	//context := controller.Context
 	//controller.Context.JSON(200, gin.H{
-	//	"message": "消息",
+	//	"message": "首页",
 	//})
-	fmt.Print("首页")
+	fmt.Print("首页\n")
+}
+func (controller IndexController) Hello()  {
+	fmt.Print("Hello\n")
 }
